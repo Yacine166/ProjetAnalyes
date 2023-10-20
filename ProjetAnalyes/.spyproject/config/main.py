@@ -12,5 +12,17 @@ import random
 
 file_name = 'My_Data.csv'
 final_data = pd.read_csv(file_name)
-vv
-new 
+
+
+#here start 
+print("\n  ----------------- This is My Data ------------\n",final_data,"\n")
+
+# check messing value 
+messing_value = final_data.isnull().sum()
+print('\n  --------------- number of messing value is------------- \n')
+print(messing_value,"\n")
+
+
+#using info() 
+print("\n  ------------------ Information -------------------\n")
+final_data.info()
