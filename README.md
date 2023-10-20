@@ -4,7 +4,8 @@ i make in all branch main.py in this path : ProjetAnalyes/.spyproject/config
 and in each branch it represent question Q1.... 
 
 
-
+# Difficult 
+-   i can't install library statsmodels and seasonal and i have make a lot change but did not work nchlh i will fix theme soon :) 
 
 
 # conclusion 
