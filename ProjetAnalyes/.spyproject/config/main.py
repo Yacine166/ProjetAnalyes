@@ -5,9 +5,11 @@ Created on Fri Oct 20 11:51:58 2023
 @author: alg16
 """
 
+
 import pandas as pd
-import calendar
-import random
+from seasonal import decompose
+
+
 
 #we have to import matplotlib for create A graphique 
 import matplotlib.pyplot as plt
@@ -23,23 +25,15 @@ final_data = pd.read_csv(file_name)
 #here start 
 print("\n  ----------------- This is My Data ------------\n",final_data,"\n")
 
-# Descriptive analysis of monthly sales
-monthly_stats = final_data.groupby('Month')['Sales'].describe()
-print('\n  --------------- Analyse des ventes------------- \n')
-print("Descriptive statistics for monthly sales:\n", monthly_stats,"\n")
+# Calcul de la moyenne mensuelle des ventes 
+monthly_mean = final_data.groupby('Month')['Sales'].mean()
 
-
-# Time series plot for monthly sales
-plt.figure(figsize=(12, 6))
-for year in range(start_year, end_year+1):
-    year_data = final_data[final_data['Year'] == year]
-    plt.plot(year_data['Month'], year_data['Sales'], label=f'Year {year}')
-
+# Visualisation de la moyenne mensuelle des ventes
+plt.figure(figsize=(10, 6))
+plt.bar(monthly_mean.index, monthly_mean.values, color='skyblue')
 plt.xlabel('Month')
-plt.ylabel('Sales')
-plt.title('Monthly Sales Over Time')
-plt.legend()
+plt.ylabel('Average Sales')
+plt.title('Average Sales per Month')
 plt.xticks(rotation=30)
-plt.yticks(rotation=30)
 plt.tight_layout()
 plt.show()
