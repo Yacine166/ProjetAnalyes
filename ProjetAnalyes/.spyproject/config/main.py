@@ -19,7 +19,7 @@ print("\n  ----------------- This is My Data ------------\n",final_data,"\n")
 
 # check messing value 
 messing_value = final_data.isnull().sum()
-print('\n\n number of messing value is\n')V
+print('\n------- number of messing value is--------\n')
 print(messing_value)
 
 #using info() 
