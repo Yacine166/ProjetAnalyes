@@ -5,11 +5,9 @@ Created on Fri Oct 20 11:51:58 2023
 @author: alg16
 """
 
-
 import pandas as pd
-from seasonal import decompose
-
-
+import calendar
+import random
 
 #we have to import matplotlib for create A graphique 
 import matplotlib.pyplot as plt
