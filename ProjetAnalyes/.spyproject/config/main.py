@@ -17,11 +17,10 @@ final_data = pd.read_csv(file_name)
 #here start 
 print("\n  ----------------- This is My Data ------------\n",final_data,"\n")
 
-# Descriptive analysis of monthly sales
-monthly_stats = final_data.groupby('Month')['Sales'].describe()
-print('\n  --------------- Analyse des ventes------------- \n')
-print("Descriptive statistics for monthly sales:\n", monthly_stats)
-
+# check messing value 
+messing_value = final_data.isnull().sum()
+print('\n\n number of messing value is\n')V
+print(messing_value)
 
 #using info() 
 print("\n  ------------------ Information -------------------\n")
