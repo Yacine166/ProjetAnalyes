@@ -1,5 +1,5 @@
 # ProjetAnalyes
-i make main.py in this path : ProjetAnalyes/.spyproject/config 
+i make in all branch main.py in this path : ProjetAnalyes/.spyproject/config \n
 and in each branch it represent question Q1.... 
 
 
